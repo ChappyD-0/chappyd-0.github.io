@@ -2,8 +2,6 @@
 # By ChappyD-0
 
 
-
-
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
 
 ## Development server
@@ -29,6 +27,10 @@ For a complete list of available schematics (such as `components`, `directives`,
 ```bash
 ng generate --help
 ```
+
+
+
+
 
 ## Building
 
