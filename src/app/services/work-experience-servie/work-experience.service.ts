@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WorkExperienceService {
-
+  accesoWorkExperience = 'Work experiencie service running... ';
   constructor() { }
 }
