@@ -1,0 +1,25 @@
+/* header.component.css */
+.header-container {
+ /* background-color: #f9f9f9;*/
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header-table td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.header-table img {
+  border-radius: 50%;
+  max-width: 100%;
+  display: block;
+}
+
