@@ -1,4 +1,32 @@
-<p>interests works!</p>
-<p>
-  {{interestService.accesoInterest}}
-</p>
+<div
+  style="
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  "
+>
+  <h2 style="
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        color: #333;
+      ">
+    Intereses
+  </h2>
+
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    <li
+      *ngFor="let int of interests"
+      style="
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        margin-bottom: 10px;
+        padding: 12px;
+        color: #555;
+      "
+    >
+      {{ int.name }}
+    </li>
+  </ul>
+</div>

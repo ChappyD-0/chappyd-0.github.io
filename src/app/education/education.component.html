@@ -1,4 +1,20 @@
-<p>education works!</p>
-<p>
-  {{educationService.accesoEducation}}
-</p>
+
+<div class="education-container">
+  <h2 class="education-title">Formación Académica</h2>
+
+  <ul class="education-list">
+    <li *ngFor="let education of education" class="education-item">
+      <div class="education-dates">
+        <strong>{{ education.startDate }} - {{ education.endDate }}</strong>
+      </div>
+
+      <div class="education-major">
+        {{ education.major }}
+      </div>
+
+      <div class="education-institution">
+        {{ education.educationalInstitution }}
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,4 +1,10 @@
-<p>languages works!</p>
-<p>
-  {{languagesService.accesoLanguages}}
-</p>
+
+<div class="languages-container">
+  <h2 class="languages-title">Idiomas</h2>
+
+  <ul class="languages-list">
+    <li *ngFor="let lan of languages" class="languages-item">
+      {{ lan.language }}
+    </li>
+  </ul>
+</div>

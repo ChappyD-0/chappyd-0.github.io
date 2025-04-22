@@ -1,4 +1,38 @@
-<p>skills works!</p>
-<p>
-  {{skillsService.accesoSkills}}
-</p>
+<div
+  style="
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  "
+>
+  <h2 style="
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        color: #333;
+      ">
+    Habilidades
+  </h2>
+
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    <li
+      *ngFor="let sk of skills"
+      style="
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        margin-bottom: 10px;
+        padding: 12px;
+      "
+    >
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-weight: bold; color: #007ACC;">
+          {{ sk.skill }}
+        </span>
+        <span style="color: #555; font-style: italic;">
+          {{ sk.level }}
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,61 @@
+
+.work-experience-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.work-experience-title {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.work-experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-experience-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.work-experience-dates {
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.work-experience-dates strong {
+  color: #333;
+}
+
+.work-experience-dates span {
+  margin-left: 8px;
+  font-style: italic;
+}
+
+.work-experience-position {
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #007ACC;
+  font-size: 1.2em;
+}
+
+.work-experience-company {
+  margin-bottom: 8px;
+  color: #777;
+}
+
+.work-experience-accomplishments {
+  color: #555;
+}
+
+.work-experience-accomplishments strong {
+  color: #333;
+}

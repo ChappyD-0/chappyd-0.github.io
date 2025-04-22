@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-work-experience',
-  templateUrl: './work-experience.Component.html',
+  templateUrl: './work-experience.component.html',
   styleUrl: './work-experience.component.css'
 })
 
