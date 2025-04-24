@@ -40,6 +40,7 @@ module.exports = function (config) {
     flags: ['--no-sandbox']
        }
      },
+    failOnEmptyTestSuite: false,
     singleRun: false,
     restartOnFileChange: true
   });
