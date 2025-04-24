@@ -1,44 +1,64 @@
+# .github/workflows/main.yml
 name: Angular Docker Image
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  build-and-push:
+  angular_deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Saca el código
+      # 1) Checkout code
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
-      # 2) Instala Node.js 20.x y cachea npm
+      # 2) Setup Node.js 20.x and cache npm
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
           cache: 'npm'
 
-      # 3) Instala dependencias y build de Angular en /docs
-      - name: Install & build Angular
-        run: |
-          npm ci
-          npm run build -- --configuration production --output-path docs --base-href=/
+      # 3) Install dependencies
+      - name: Install npm dependencies
+        run: npm ci
 
-      # 4) Login en Docker Hub
+      # 4) Run tests
+      - name: Run unit tests
+        run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+      # 5) Build Angular app into /docs
+      - name: Build Angular app
+        run: npm run build -- --output-path=docs
+
+      # 6) Log in to Docker Hub
       - name: Docker login
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # 5) Construye y sube la imagen usando el Dockerfile
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_USER }}/mycv:latest
+      # 7) Pull and start the HTTPD base image
+      - name: Download and run the Docker base image
+        run: docker run -d --name http_base httpd:2.4-alpine
+
+      # 8) Copy build output into the container
+      - name: Copy build output into the container
+        run: docker cp docs/browser/. http_base:/usr/local/apache2/htdocs
+
+      # 9) Commit container as a new image tagged :latest
+      - name: Build custom Docker image
+        run: |
+          docker commit \
+            http_base \
+            ${{ secrets.DOCKER_USER }}/mycv:latest
+
+      # 10) Push your custom image to Docker Hub
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USER }}/mycv:latest
