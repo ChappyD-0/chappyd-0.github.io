@@ -1,0 +1,49 @@
+.title{
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #EFD9CE;
+}
+
+.ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li{
+  background-color: #F4EAFA;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+.div-skill{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-div{
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.span-skill{
+  color: #861D74;
+  font-weight: bold;
+}
+
+.span-level{
+  color: #555;
+  font-style: italic;
+}
+
+
+
+
+
+
+

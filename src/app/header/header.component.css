@@ -2,14 +2,26 @@
 .header-container {
  /* background-color: #f9f9f9;*/
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .header-table {
   width: 100%;
   border-collapse: collapse;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+  color: #EFD9CE;
 }
 
 .header-table td {

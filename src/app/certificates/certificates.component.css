@@ -1,0 +1,44 @@
+.div-main{
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.h2-certificates{
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #EFD9CE;
+}
+
+.ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0,0,0,0.5);
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+.div-title{
+  font-weight: bold;
+  color: #861D74;
+}
+
+.span-year{
+  font-weight: normal;
+  color: #555;
+}
+.div-description{
+  margin-top: 5px;
+  color: #555;
+}
+
+.div-link{
+
+}

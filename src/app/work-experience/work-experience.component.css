@@ -7,8 +7,8 @@
 
 .work-experience-title {
   margin-bottom: 15px;
-  font-size: 1.5em;
-  color: #333;
+  font-size: 2.5em;
+  color: #EFD9CE;
 }
 
 .work-experience-list {
@@ -21,14 +21,14 @@
   margin-bottom: 20px;
   padding: 16px;
   border-radius: 8px;
-  background: #fff;
+  background: #F4EAFA;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .work-experience-dates {
   margin-bottom: 6px;
-  color: #666;
+  color: ##7826AB;
 }
 
 .work-experience-dates strong {
@@ -43,13 +43,13 @@
 .work-experience-position {
   margin-bottom: 4px;
   font-weight: bold;
-  color: #007ACC;
+  color: #291D86;
   font-size: 1.2em;
 }
 
 .work-experience-company {
   margin-bottom: 8px;
-  color: #777;
+  color: #861D7A;
 }
 
 .work-experience-accomplishments {
